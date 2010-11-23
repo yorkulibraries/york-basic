@@ -1,0 +1,221 @@
+body {
+	background: url("../images/bg.png") repeat #DDDDDD;
+	color:#222222;
+	font-family:"Lucida Grande","Lucida Sans Unicode",Arial,Tahoma,sans-serif;
+	font-size:13px;
+	line-height:22px;
+	text-shadow:1px 1px 1px #FFFFFF;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1, h1 a {
+	color:#373737;
+	font:bold 20px Arial,Tahoma,sans-serif;
+	margin-top:3px;
+}
+
+h2, h2 a, h3, h3 a, h6 {
+	color:#373737;
+	font:bold 16px Arial,Tahoma,sans-serif;
+	margin-bottom:15px;
+	text-decoration:none;
+}
+
+/* SPECIFICS */
+
+
+#header {
+	padding:45px 0 15px;
+	background: #000;
+}
+
+#header #logo {
+	float:left;
+	margin-top:10px;
+}
+
+#header #menu {
+	float:right;	
+}
+
+#header #menu li {
+	float:left;
+	margin:0 0 0 5px;
+	position: relative;
+	list-style: none;
+}
+
+#header #menu li a {
+	color:#FFFFFF;
+	display:block;
+	font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:10px 15px;
+	text-decoration:none;
+	text-shadow:2px 2px 2px #333333;
+}
+
+#header #menu li a:hover {
+	-moz-border-radius:5px 5px 5px 5px;
+	-moz-box-shadow:0 1px 3px #242424;
+	background: #6f6f6f;
+	border:1px solid #606060;
+	padding:9px 14px !important;
+}
+
+#header #menu span {
+	color:#C8C8C8;
+	display:block;
+	font-size:12px;
+	font-weight:normal;
+	text-shadow:1px 1px 1px #222621;
+}
+
+
+#breadcrumb {
+	background:url("../images/breadcrumb.png") no-repeat;
+	color:#696969;
+	height:40px;
+	line-height:40px;
+	margin-bottom:25px;
+	padding:0 15px;
+	text-shadow:1px 1px 1px #FFFFFF;
+	width:950px;
+}
+
+
+/* INTERNAL CONTENT */
+#featured_images {
+	margin-top: 20px;
+}
+div.exhibit-item-title a {
+	font:bold 16px Arial,Tahoma,sans-serif;
+	margin-bottom:15px;
+	text-decoration:none;
+}
+
+
+div.image-box, img.thumb {
+	background:none repeat scroll 0 0 white;
+	border:1px dotted #A2A2A2;
+	float:left;
+	margin:0 16px 17px 0;
+	padding:10px;
+	position:relative;
+}
+
+div.image-box img {
+	display:block;
+}
+
+div.image-box div.title {
+	background:url("../images/transparent-bg.png") repeat;
+	bottom:10px;
+	color:white;
+	font-family:arial;
+	font-size:14px;
+	left:10px;
+	right:10px;
+	line-height:17px;
+	padding:15px;
+	position:absolute;
+	text-align:center;
+	text-shadow:none;
+}
+
+
+.box {
+	margin-bottom: 40px;
+}
+.box h5 {
+	-moz-border-radius:5px 5px 0 0;
+	background:url("../images/sidebar-title-bg.jpg") repeat-x #DFE4E8;
+	border:1px solid #D4D9DE;
+	color:#373737;
+	padding:10px 15px;
+	text-shadow:1px 1px 1px #FFFFFF;
+	margin-bottom: 0;
+}
+
+.box .box-content {
+	-moz-border-radius:0 0 5px 5px;
+	background:none repeat scroll 0 0 #F1F6FA;
+	border-color:-moz-use-text-color #D4D9DE #D4D9DE;
+	border-right:1px solid #D4D9DE;
+	border-style:none solid solid;
+	border-width:medium 1px 1px;
+	padding:15px 15px 0;
+}
+.box ul.box-list, .box ul.exhibit-page-nav {
+	margin: 0;
+	-moz-border-radius:0 0 5px 5px;
+	background:none repeat scroll 0 0 #F1F6FA;
+	border-color:-moz-use-text-color #D4D9DE #D4D9DE;
+	border-right:1px solid #D4D9DE;
+	border-style:none solid solid;
+	border-width:medium 1px 1px;
+	padding:0
+}
+.box .box-list li, .box .exhibit-page-nav li {
+	background:url("../images/list-arrow.png") no-repeat scroll 15px 17px transparent;
+	border-bottom:1px solid #D4D9DE;
+	padding-left:28px;
+	position:relative;
+	list-style: none;
+}
+.box .box-list li a, .box .exhibit-page-nav li a {
+	background:none repeat scroll 0 0 #F1F6FA;
+	color:#696969;
+	display:block;
+	font-family:"Lucida Grande","Lucida Sans Unicode",Arial,Tahoma,sans-serif;
+	font-size:13px;
+	padding:10px 25px 10px 0;
+	text-decoration:none;
+	text-shadow:1px 1px 1px #FFFFFF;
+}
+/* FOOTER STUFF */
+#footer {
+	margin-top:25px;
+	overflow:hidden;
+	background: #202020;
+}
+
+#footer_content {
+	margin:0 auto;
+	overflow:hidden;
+	padding:40px 0 20px;
+}
+#footer_content p {
+	margin-bottom:20px;
+	text-shadow:1px 1px 1px #FFFFFF;
+}
+
+#footer_content h4 {
+	color:#FFFFFF;
+	font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:2px 2px 2px #111111;
+}
+
+#footer_content a {
+	color:#767676;
+	text-shadow:1px 1px 1px #111111;
+}
+
+#footer_content #copyright {
+	-moz-border-radius:5px 5px 5px 5px;
+	-moz-box-shadow:0 0 5px #191919;
+	background:none repeat scroll 0 0 #303030;
+	color:#767676;
+	margin:15px 0;
+	overflow:hidden;
+	padding:20px 30px;
+	text-shadow:1px 1px 1px #111111;
+}
+
