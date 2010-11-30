@@ -1,6 +1,5 @@
 <?php exhibit_builder_exhibit_head(array('page_title' => 'Welcome')); ?>	
 
-	
 	<h1>Search <?php echo $exhibit->title ?> Exhibit</h1>
 	
 	<div class="span-16">		

@@ -42,7 +42,7 @@
 
 				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>">Home<span>The starting point</span></a></li>
 				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>?action=browse">Browse<span>Browse pages</span></a></li>
-				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>?action=search">Search<span>Search the exhibit</span></a></li>
+				<!-- li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>?action=search">Search<span>Search the exhibit</span></a></li -->
 				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>/about/">About<span>About this exhibit</span></a></li>
 				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>/contact/">Contact<span>Contact the creators</span></a></li>
 			</ul>
