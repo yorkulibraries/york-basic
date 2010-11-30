@@ -1,3 +1,11 @@
+<?php 
+if ($_REQUEST["action"] == "browse" || $_REQUEST["action"] == "search") {
+	$action = $_REQUEST["action"];
+ 	include EXHIBIT_THEMES_DIR . "/".$exhibit->theme."/$action.php";
+	exit;
+} 
+?>
+
 <?php exhibit_builder_exhibit_head(array('page_title' => 'Welcome')); ?>	
 
 	<?php	

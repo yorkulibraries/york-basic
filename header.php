@@ -28,16 +28,23 @@
 	 <div id="header">
 		<div class="container">
 			<div id="logo">
-	        	<a href="index.html"><img src="<?php echo html_escape(exhibit_builder_exhibit_img('images/default_logo.png')); ?>"></a>
+	        	<a href="index.html">
+					<?php $items = get_items(array('tags' => $exhibit->slug . "-logo"), 1); 
+						if (count($items) == 0):
+					?>
+					<img src="<?php echo html_escape(exhibit_builder_exhibit_img('images/default_logo.png')); ?>"></a>
+					<?php else:
+						echo item_fullsize(array(), array(), $items[0]); 							
+					endif; ?>
 	        </div>
 
 			<ul id="menu">
 
 				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>">Home<span>The starting point</span></a></li>
-				<li><a href="index.html">Browse<span>Browse pages</span></a></li>
-				<li><a href="index.html">Search<span>Search the exhibit</span></a></li>
-				<li><a href="index.html">About<span>About this exhibit</span></a></li>
-				<li><a href="index.html">Contact<span>Contact the creators</span></a></li>
+				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>?action=browse">Browse<span>Browse pages</span></a></li>
+				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>?action=search">Search<span>Search the exhibit</span></a></li>
+				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>/about/">About<span>About this exhibit</span></a></li>
+				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>/contact/">Contact<span>Contact the creators</span></a></li>
 			</ul>
 
 			<div class="clear"></div>
