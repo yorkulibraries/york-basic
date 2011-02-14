@@ -218,3 +218,7 @@ div.image-box div.title {
 	text-shadow:1px 1px 1px #111111;
 }
 
+
+/**** SPECIFIC TO EXHIBIT LAYOUTS ******/
+.text-image-right .exhibit-item { margin-left: 20px; }
+.text-image-left .exhibit-item { margin-right: 20px; }

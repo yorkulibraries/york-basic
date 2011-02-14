@@ -12,8 +12,18 @@
 
 	<?php exhibit_builder_render_exhibit_page(); ?>	
 
+	<div class="clear" style="padding-top: 10px;"></div>
 	<?php echo exhibit_builder_link_to_previous_exhibit_page(); ?>
     <?php echo exhibit_builder_link_to_next_exhibit_page(); ?>
+	
+	
+	  <script>
+var idcomments_acct = 'ff00f3485d8f5fea3ca2e5450ac86e49';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
 
 </div>
 <div class="span-8 last">
