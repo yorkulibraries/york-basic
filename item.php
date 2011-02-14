@@ -61,10 +61,7 @@
 </div>
 
 <div class="span-8 last">		
-		<div class="box">
-			<h5>Pages</h5>
-			<?php echo exhibit_builder_page_nav(); ?>
-		</div>
+	
 
 		<div class="box">
 			<h5>Sections</h5>
@@ -76,6 +73,11 @@
 					<?php endif; ?>         
 				<?php endforeach; ?>
 		    </ul>
+		</div>
+		
+		<div class="box">
+			<h5>Pages</h5>
+			<?php echo exhibit_builder_page_nav(); ?>
 		</div>
 </div>
 

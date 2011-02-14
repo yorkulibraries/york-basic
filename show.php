@@ -8,7 +8,7 @@
 
 <div class="span-16">
 	<h2><?= html_escape($section->title) ?></h2>
-	<h4><?= neat_trim(strip_tags($section->description), 1000) ?></h4>
+	<h4><?= strip_tags($section->description) ?></h4>
 
 	<?php exhibit_builder_render_exhibit_page(); ?>	
 
@@ -17,10 +17,6 @@
 
 </div>
 <div class="span-8 last">
-	<div class="box">
-		<h5>Pages</h5>
-		<?php echo exhibit_builder_page_nav(); ?>
-	</div>
 	
 	<div class="box">
 		<h5>Sections</h5>
@@ -32,6 +28,11 @@
 				<?php endif; ?>         
 			<?php endforeach; ?>
 	    </ul>
+	</div>
+	
+	<div class="box">
+		<h5>Pages</h5>
+		<?php echo exhibit_builder_page_nav(); ?>
 	</div>
 </div>
 
