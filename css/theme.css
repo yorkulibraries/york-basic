@@ -1,7 +1,7 @@
 body {
-	background: url("../images/bg.png") repeat #DDDDDD;
-	color:#222222;
-	font-family:"Lucida Grande","Lucida Sans Unicode",Arial,Tahoma,sans-serif;
+	background: url("../images/body-bg.png") repeat #DBDBDB;
+	color:#111;
+	font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Tahoma,sans-serif;
 	font-size:13px;
 	line-height:22px;
 }
@@ -143,7 +143,7 @@ div.image-box div.title {
 .box .box-content {
 	-moz-border-radius:0 0 5px 5px;
 	background:none repeat scroll 0 0 #F1F6FA;
-	border-color:-moz-use-text-color #D4D9DE #D4D9DE;
+	border-color:#D4D9DE;
 	border-right:1px solid #D4D9DE;
 	border-style:none solid solid;
 	border-width:medium 1px 1px;
@@ -153,7 +153,7 @@ div.image-box div.title {
 	margin: 0;
 	-moz-border-radius:0 0 5px 5px;
 	background:none repeat scroll 0 0 #F1F6FA;
-	border-color:-moz-use-text-color #D4D9DE #D4D9DE;
+	border-color:#D4D9DE;
 	border-right:1px solid #D4D9DE;
 	border-style:none solid solid;
 	border-width:medium 1px 1px;
@@ -222,3 +222,4 @@ div.image-box div.title {
 /**** SPECIFIC TO EXHIBIT LAYOUTS ******/
 .text-image-right .exhibit-item { margin-left: 20px; }
 .text-image-left .exhibit-item { margin-right: 20px; }
+.text-image-right .exhibit-item-description, .text-image-left .exhibit-item-description { font-size: 12px; color: #666;}
