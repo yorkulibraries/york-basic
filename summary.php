@@ -13,7 +13,7 @@ if ($_REQUEST["action"] == "browse" || $_REQUEST["action"] == "search") {
 		set_items_for_loop($items);
 	?>	
 	<br/>
-	<h2>Featured Slider Images</h2>
+	<h2>Featured Images</h2>
 	<div id="slider">
 		<div id="slider_images">
 			<ul>
@@ -36,7 +36,8 @@ if ($_REQUEST["action"] == "browse" || $_REQUEST["action"] == "search") {
 	</div>
 	<hr/>
 	
-	<h2>Featured Images</h2>
+<?php 
+/*	<h2>Featured Images</h2>
 	<div id="featured_images">
 	<?php	
 		while(loop_items()):
@@ -50,7 +51,7 @@ if ($_REQUEST["action"] == "browse" || $_REQUEST["action"] == "search") {
 	<?php endif; endwhile; ?>
 	</div>
 	<div class="clear"></div>
-	
+*/?>	
 	<h1><?php echo $exhibit->title ?></h1>
 	<p><?php echo $exhibit->description; ?></p>
 	
