@@ -18,7 +18,7 @@ if ($_REQUEST["action"] == "browse" || $_REQUEST["action"] == "search") {
 		<div id="slider_images">
 			<ul>
 				<?php while(loop_items()): ?>
-					<li><?php echo link_to_item(item_square_thumbnail(array('width' => '300px'))); ?></li>
+					<li><?php echo link_to_item(item_square_thumbnail(array('width' => '300px', 'height' => '300px'))); ?></li>
 				<?php endwhile; ?>
 			</ul>
 		</div>
