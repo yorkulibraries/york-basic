@@ -28,7 +28,6 @@
 	 <div id="header">
 		<div class="container">
 			<div id="logo">
-	        	<a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>">
 					<?php $items = get_items(array('tags' => $exhibit->slug . "-logo"), 1); 
 						if (count($items) == 0):
 					?>
