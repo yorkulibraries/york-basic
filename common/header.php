@@ -26,6 +26,7 @@ $titleParts[] = option('site_title');
 <?php 
   queue_css_file("blueprint/screen");
   queue_css_file("theme");
+  queue_css_file('tabs');
   queue_css_file("slider");
   echo head_css();
   echo theme_header_background();
