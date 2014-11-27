@@ -1,7 +1,7 @@
 <?php 
     $exhibit = get_current_record('exhibit', false); 
     $sections = get_exhibit_sections($exhibit);
-    $featuredImages = get_records('item', array('tags' => $exhibit->slug . "-featured-image"), 4);
+    $featuredImages = get_records('Item', array('tags' => $exhibit->slug . "-featured-image"), 4);
 ?>
 
 <?php echo head(array('bodyclass' => 'exhibits', 'title' => $exhibit->title)); ?>
