@@ -40,26 +40,26 @@ $titleParts[] = option('site_title');
 ?>
 
 </head>
-<body>
-    <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
-    <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-	
-	 <div id="header">
-		<div class="container">
-			<div id="logo">
-			    <?php echo exhibit_logo(get_current_record('exhibit', false)); ?>
-	        </div>
 
-			<ul id="menu">
-				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>">Home<span>The starting point</span></a></li>
-				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>?action=browse">Browse<span>Browse pages</span></a></li>
-				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>/about/">About<span>About this exhibit</span></a></li>
-				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>/contact/">Contact<span>Contact the creators</span></a></li>
-			</ul>
+<?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+<?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 
-			<div class="clear"></div>
-		</div>
+<div id="header">
+	<div class="container">
+		<div id="logo">
+		    <?php echo exhibit_logo(get_current_record('exhibit', false)); ?>
+        </div>
+
+		<ul id="menu">
+			<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>">Home<span>The starting point</span></a></li>
+			<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>?action=browse">Browse<span>Browse pages</span></a></li>
+			<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>/about/">About<span>About this exhibit</span></a></li>
+			<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>/contact/">Contact<span>Contact the creators</span></a></li>
+		</ul>
+
+		<div class="clear"></div>
 	</div>
-	
-	<div class="container">		
-	    <?php echo flash(); ?>	
+</div>
+
+<div class="container">		
+    <?php echo flash(); ?>	
