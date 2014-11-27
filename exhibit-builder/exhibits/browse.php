@@ -1,6 +1,5 @@
-<?php exhibit_builder_exhibit_head(array('page_title' => 'Welcome')); ?>	
+<?php head(array('page_title' => 'Welcome')); ?>	
 
-	
 	<h1>Browse <?php echo $exhibit->title ?> Exhibit</h1>
 	
 	<div class="span-16">		
@@ -17,4 +16,4 @@
 		</div>
 	</div>
 
-<?php exhibit_builder_exhibit_foot(); ?>
+<?php foot(); ?>

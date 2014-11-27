@@ -1,4 +1,4 @@
-<?php exhibit_builder_exhibit_head(array('p' => 'stuff')); ?>
+<?php head(array('p' => 'stuff')); ?>
 
 <div id="breadcrumb">		
 	<span><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>">Home</a> » <?php $p=$section->title; echo html_escape($p); ?> </span>
@@ -46,4 +46,4 @@ var idcomments_post_url;
 	</div>
 </div>
 
-<?php exhibit_builder_exhibit_foot(); ?>
+<?php foot(); ?>

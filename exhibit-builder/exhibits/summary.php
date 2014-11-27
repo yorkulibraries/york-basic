@@ -1,12 +1,13 @@
 <?php 
 if ($_REQUEST["action"] == "browse" || $_REQUEST["action"] == "search") {
 	$action = $_REQUEST["action"];
- 	include EXHIBIT_THEMES_DIR . "/".$exhibit->theme."/$action.php";
+ 	//include EXHIBIT_THEMES_DIR . "/".$exhibit->theme."/$action.php";
+ 	include "$action.php";
 	exit;
 } 
 ?>
 
-<?php exhibit_builder_exhibit_head(array('page_title' => 'Welcome')); ?>	
+<?php head(array('page_title' => 'Welcome')); ?>	
 
 	<?php	
 		$items = get_items(array('tags' => $exhibit->slug . "-featured-image"), 4); 
@@ -51,7 +52,7 @@ if ($_REQUEST["action"] == "browse" || $_REQUEST["action"] == "search") {
 	<?php endif; endwhile; ?>
 	</div>
 	<div class="clear"></div>
-*/?>	
+<?php */ ?>	
 	<h1><?php echo $exhibit->title ?></h1>
 	<p><?php echo $exhibit->description; ?></p>
 	
@@ -74,4 +75,4 @@ if ($_REQUEST["action"] == "browse" || $_REQUEST["action"] == "search") {
 		</div>
 	</div>
 
-<?php exhibit_builder_exhibit_foot(); ?>
+<?php foot(); ?>

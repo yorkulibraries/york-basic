@@ -1,5 +1,5 @@
-<?php exhibit_builder_exhibit_head(array('bodyclass' => 'exhibits')); ?>
-<link rel="stylesheet" media="screen" href="<?php echo html_escape(exhibit_builder_exhibit_css('css/tabs')); ?>" />
+<?php head(array('bodyclass' => 'exhibits')); ?>
+<link rel="stylesheet" media="screen" href="<?php echo html_escape(exhibit_builder_exhibit_css('tabs')); ?>" />
 <div id="breadcrumb">		
 	<span><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>">Home</a> » <a href="<?php echo exhibit_builder_exhibit_uri($exhibit, $section); ?>"><?= html_escape($section->title) ?></a> » <?php echo item('Dublin Core', 'Title'); ?></span>
 </div>	
@@ -82,4 +82,4 @@
 </div>
 
 
-<?php exhibit_builder_exhibit_foot(); ?>
+<?php foot(); ?>

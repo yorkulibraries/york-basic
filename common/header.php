@@ -2,22 +2,29 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title><?php echo $exhibit->title; ?> | <?php echo settings('site_title'); ?></title>
+<?php $ex = exhibit_builder_get_current_exhibit(); ?>
+<title><?php 
+echo $ex->title; ?> | <?php echo settings('site_title'); ?></title>
 
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <!-- Stylesheets -->
-<link rel="stylesheet" media="screen" href="<?php echo html_escape(exhibit_builder_exhibit_css('css/blueprint/screen')); ?>" />
-<link rel="stylesheet" media="screen" href="<?php echo html_escape(exhibit_builder_exhibit_css('css/theme')); ?>" />
-<link rel="stylesheet" media="print" href="<?php echo html_escape(css('print')); ?>" />
-<link rel="stylesheet" media="screen" href="<?php echo html_escape(exhibit_builder_exhibit_css('css/slider')); ?>" />
-
+<?php 
+  queue_css("blueprint/screen");
+  queue_css("theme");
+  queue_css("slider");
+  display_css();
+?>
 
 <!-- javascript -->
-<?php echo exhibit_builder_exhibit_js('js/jquery.min') ?>
-<?php echo exhibit_builder_exhibit_js('js/tabs') ?>
-<?php echo exhibit_builder_exhibit_js('js/slider') ?>
+
+<?php
+  queue_js('js/jquery.min');
+  queue_js('js/tabs');
+  queue_js('js/slider');
+  display_js();
+?>
 
 <!-- Plugin Stuff -->
 <?php plugin_header(); ?>
@@ -28,10 +35,10 @@
 	 <div id="header">
 		<div class="container">
 			<div id="logo">
-					<?php $items = get_items(array('tags' => $exhibit->slug . "-logo"), 1); 
+					<?php $items = get_items(array('tags' => $ex->slug . "-logo"), 1);  
 						if (count($items) == 0):
 					?>
-					<img src="<?php echo html_escape(exhibit_builder_exhibit_img('images/default_logo.png')); ?>"></a>
+					<img src="<?php echo html_escape(img('default_logo.png')); ?>"></a>
 					<?php else:
 						echo item_fullsize(array(), array(), $items[0]); 							
 					endif; ?>
@@ -54,5 +61,3 @@
 	<div class="container">
 								
 				<?php echo flash(); ?>	
-				
-		
