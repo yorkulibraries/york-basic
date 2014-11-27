@@ -53,7 +53,6 @@ $titleParts[] = option('site_title');
 			<ul id="menu">
 				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>">Home<span>The starting point</span></a></li>
 				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>?action=browse">Browse<span>Browse pages</span></a></li>
-				<!-- li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>?action=search">Search<span>Search the exhibit</span></a></li -->
 				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>/about/">About<span>About this exhibit</span></a></li>
 				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>/contact/">Contact<span>Contact the creators</span></a></li>
 			</ul>
