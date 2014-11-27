@@ -2,62 +2,65 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<?php $ex = exhibit_builder_get_current_exhibit(); ?>
-<title><?php 
-echo $ex->title; ?> | <?php echo settings('site_title'); ?></title>
-
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+<?php if ( $description = option('description')): ?>
+<meta name="description" content="<?php echo $description; ?>" />
+<?php endif; ?>
+
+<?php
+if (isset($title)) {
+    $titleParts[] = strip_formatting($title);
+}
+$titleParts[] = option('site_title');
+?>
+<title><?php echo implode(' &middot; ', $titleParts); ?></title>
+
+<?php echo auto_discovery_link_tags(); ?>
+
+<!-- Plugin Stuff -->
+<?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
+
 <!-- Stylesheets -->
 <?php 
-  queue_css("blueprint/screen");
-  queue_css("theme");
-  queue_css("slider");
-  display_css();
+  queue_css_file("blueprint/screen");
+  queue_css_file("theme");
+  queue_css_file("slider");
+  echo head_css();
+  echo theme_header_background();
 ?>
 
 <!-- javascript -->
-
 <?php
-  queue_js('js/jquery.min');
-  queue_js('js/tabs');
-  queue_js('js/slider');
-  display_js();
+  queue_js_file('js/jquery.min');
+  queue_js_file('js/tabs');
+  queue_js_file('js/slider');
+  echo head_js();
 ?>
-
-<!-- Plugin Stuff -->
-<?php plugin_header(); ?>
 
 </head>
 <body>
+    <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+    <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 	
 	 <div id="header">
 		<div class="container">
 			<div id="logo">
-					<?php $items = get_items(array('tags' => $ex->slug . "-logo"), 1);  
-						if (count($items) == 0):
-					?>
-					<img src="<?php echo html_escape(img('default_logo.png')); ?>"></a>
-					<?php else:
-						echo item_fullsize(array(), array(), $items[0]); 							
-					endif; ?>
+			    <?php echo exhibit_logo(get_current_record('exhibit', false)); ?>
 	        </div>
 
 			<ul id="menu">
-
-				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>">Home<span>The starting point</span></a></li>
-				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>?action=browse">Browse<span>Browse pages</span></a></li>
-				<!-- li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>?action=search">Search<span>Search the exhibit</span></a></li -->
-				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>/about/">About<span>About this exhibit</span></a></li>
-				<li><a href="<?php echo exhibit_builder_exhibit_uri($exhibit); ?>/contact/">Contact<span>Contact the creators</span></a></li>
+				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>">Home<span>The starting point</span></a></li>
+				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>?action=browse">Browse<span>Browse pages</span></a></li>
+				<!-- li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>?action=search">Search<span>Search the exhibit</span></a></li -->
+				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>/about/">About<span>About this exhibit</span></a></li>
+				<li><a href="<?php echo exhibit_builder_exhibit_uri(); ?>/contact/">Contact<span>Contact the creators</span></a></li>
 			</ul>
 
 			<div class="clear"></div>
 		</div>
 	</div>
 	
-	
-	<div class="container">
-								
-				<?php echo flash(); ?>	
+	<div class="container">		
+	    <?php echo flash(); ?>	
